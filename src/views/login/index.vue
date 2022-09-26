@@ -1,10 +1,7 @@
 <template>
   <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
-
-      <div class="title-container">
-        <h3 class="title">Login Form</h3>
-      </div>
+      <img class="title-container" src="../../common/logo.png" alt="">
 
       <el-form-item prop="username">
         <span class="svg-container">
@@ -178,18 +175,33 @@ $dark_gray:#889aa4;
 $light_gray:#eee;
 
 .login-container {
-  min-height: 100%;
-  width: 100%;
-  background-color: $bg;
-  overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../common/background.png'); // 设置背景图片
 
   .login-form {
-    position: relative;
-    width: 520px;
-    max-width: 100%;
-    padding: 160px 35px 0;
-    margin: 0 auto;
-    overflow: hidden;
+    position: absolute;
+    width: 518px;
+    height: 388px;
+    top: 50%;
+    left: 50%;
+    margin-top: -194px;
+    margin-left: -259px;
+    padding: 76px 35px;
+    background: #fff;
+    border-radius: 10px;
+      .title-container{
+         position: absolute;
+         width: 96px;
+         height: 96px;
+         top: -46px;
+         left: 50%;
+         margin-left: -48px;
+       }
   }
 
   .tips {
